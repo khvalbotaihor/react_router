@@ -12,9 +12,9 @@ function App() {
         <>
             <Routes>
                 <Route path="/" element={<Layout /> }>
-                    <Route path='/' element={<HomePage/>}/>
-                    <Route path='/about' element={<AboutPage/>}/>
-                    <Route path='/posts' element={<BlogPage/>}/>
+                    <Route index element={<HomePage/>}/>
+                    <Route path='about' element={<AboutPage/>}/>
+                    <Route path='posts' element={<BlogPage/>}/>
                     <Route path='*' element={<NotFoundPage/>}/>
                 </Route>
             </Routes>
