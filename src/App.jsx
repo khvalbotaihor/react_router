@@ -5,23 +5,21 @@ import BlogPage from './pages/BlogPage'
 import NotFoundPage from './pages/NotFoundPage'
 
 import {Routes, Route, Link} from 'react-router-dom'
+import Layout from "./components/Layout";
 
 function App() {
-  return (
-    <>
-      <header>
-        <Link to="/">Home</Link>
-        <Link to="/posts">Blog</Link>
-        <Link to="/about">About</Link>
-      </header>
-        <Routes>
-            <Route path='/' element={<HomePage /> }/>
-            <Route path='/about' element={<AboutPage /> }/>
-            <Route path='/posts' element={<BlogPage /> }/>
-            <Route path='*' element={<NotFoundPage /> }/>
-        </Routes>
-    </>
-  );
+    return (
+        <>
+            <Routes>
+                <Route path="/" element={<Layout /> }>
+                    <Route path='/' element={<HomePage/>}/>
+                    <Route path='/about' element={<AboutPage/>}/>
+                    <Route path='/posts' element={<BlogPage/>}/>
+                    <Route path='*' element={<NotFoundPage/>}/>
+                </Route>
+            </Routes>
+        </>
+    );
 }
 
 export default App;
