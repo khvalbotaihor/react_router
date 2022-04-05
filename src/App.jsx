@@ -7,6 +7,8 @@ import NotFoundPage from './pages/NotFoundPage'
 import {Routes, Route, Link} from 'react-router-dom'
 import Layout from "./components/Layout";
 import SinglePage from "./pages/SinglePage";
+import CreatePost from "./pages/CreatePost";
+import Editpost from "./pages/Editpost";
 
 function App() {
     return (
@@ -17,6 +19,8 @@ function App() {
                     <Route path='about' element={<AboutPage/>}/>
                     <Route path='posts' element={<BlogPage/>}/>
                     <Route path='posts/:id' element={<SinglePage/>}/>
+                    <Route path='posts/new' element={<CreatePost />}/>
+                    <Route path='posts/:id/edit' element={<Editpost />}/>
                     <Route path='*' element={<NotFoundPage/>}/>
                 </Route>
             </Routes>
