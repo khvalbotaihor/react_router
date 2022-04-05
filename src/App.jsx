@@ -10,9 +10,9 @@ function App() {
   return (
     <>
       <header>
-        <a href="/">Home</a>
-        <a href="/posts">Blog</a>
-        <a href="/about">About</a>
+        <Link to="/">Home</Link>
+        <Link to="/posts">Blog</Link>
+        <Link to="/about">About</Link>
       </header>
         <Routes>
             <Route path='/' element={<HomePage /> }/>

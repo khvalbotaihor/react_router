@@ -3,8 +3,8 @@ import React from 'react';
 const BlogPage = () => {
     return (
         <div>
-            Posts page
-        </div>
+            <h1>Blog page</h1>
+            <p>This is a demo website about react router dom</p>        </div>
     );
 };
 
